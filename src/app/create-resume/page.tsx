@@ -1,8 +1,10 @@
-import React from 'react'
+import Resume from '@/components/Resume/Resume'
+import React, { FormEvent, FormEventHandler, useEffect } from 'react'
 
 const CreateResume = () => {
+
     return (
-        <div>CreateResume</div>
+        <Resume />
     )
 }
 

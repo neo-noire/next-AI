@@ -16,7 +16,7 @@ const Navbar = () => {
                 </Link>
                 {/* Desctop Menu */}
                 <nav className='md:flex hidden'>
-                    <ul className='flex-center gap-1 mr-8'>
+                    <ul className='flex-center gap-1 mr-8 list-none'>
                         <li >
                             <Link href={'/create-resume'} className='p-2 hover:text-neutral-300'>
                                 Create Resume

@@ -1,4 +1,50 @@
 @tailwind base;
+
+@layer base {
+  ul {
+    padding: initial;
+    list-style: initial;
+  }
+  ol {
+    @apply list-decimal list-inside;
+  }
+}
+
+.job-description {
+  > h1 {
+    @apply text-2xl;
+  }
+  > h2 {
+    @apply text-xl;
+  }
+  > h3 {
+    @apply text-lg;
+  }
+  > ul,
+  ol {
+    > h1 {
+      @apply text-2xl;
+    }
+    > h2 {
+      @apply text-xl;
+    }
+    > h3 {
+      @apply text-lg;
+    }
+
+    > li {
+      > h1 {
+        @apply text-2xl;
+      }
+      > h2 {
+        @apply text-xl;
+      }
+      > h3 {
+        @apply text-lg;
+      }
+    }
+  }
+}
 @tailwind components;
 @tailwind utilities;
 
@@ -17,6 +63,7 @@
 }
 
 body {
+  box-sizing: border-box;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +71,35 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: whitesmoke;
+  color: black;
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+.dropdown > .item {
+  padding: 0.5rem;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.1rem 1rem;
+  /* margin-bottom: 2rem; */
+}
+
+.tel {
+  @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
 }
 
 .flex-center {
@@ -36,4 +112,12 @@ body {
 
 .button {
   @apply rounded-full border border-white py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm flex-center;
+}
+
+.black_btn {
+  @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm  flex items-center justify-center;
+}
+
+.outline_btn {
+  @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm  flex items-center justify-center;
 }

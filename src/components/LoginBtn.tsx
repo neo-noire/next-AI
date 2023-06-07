@@ -8,14 +8,14 @@ import Image from 'next/image'
 const LoginBtn = () => {
     const { data: session } = useSession()
 
-    useEffect(() => {
-        // fn to get multiply providers 
-        const providerHandler = async () => {
-            const res = await getProviders();
-            // console.log(res, 'providers are');
-        }
-        providerHandler()
-    }, [])
+    // useEffect(() => {
+    //     // fn to get multiply providers 
+    //     const providerHandler = async () => {
+    //         const res = await getProviders();
+    //         // console.log(res, 'providers are');
+    //     }
+    //     providerHandler()
+    // }, [])
 
     console.log(session);
 
